@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	border-right: 1px solid #ff0000;
+	border-left: 1px solid #ff0000;
+	background: wheat;
+}
+
+h1{
+	font-weight: 700;
+	color: black;
+	font-size: 40px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px #ff0000;
+}
+
+h2{
+	font-weight: 300;
+	color: black;
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3px;
+	text-decoration: underline;
+}
+
+label{
+	color:#d884c0;
+	font-size: 20px;
+}
+
+label:hover{
+	color: red;
+}
+
+button{
+	background: #b2b5e9;
+	margin: 10px;
+	width: 150px;
+}
+
+button:hover{
+	background: #a583eb;
+	border: #a583eb;
+}
+
+button:focus{
+	background: #3c42ae;
+}
+
+input:invalid {
+  border: 1px solid #e05c61;
+}
+
+input:valid {
+  border: 1px solid #00c0f0;
+}
+
+small{
+	font-style: 13px;
+}
+
+.form__error {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+form input {
+    outline: none;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+}

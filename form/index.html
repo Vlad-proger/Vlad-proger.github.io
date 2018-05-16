@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		function valid(form){
+			var fail = false;
+			var password = form.password.value;
+			var rePassword = form.rePassword.value;
+			if (password != rePassword)
+				fail = "Passwords do not match";
+			if(fail)
+				alert(fail);	
+		}	 
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form action="#" method="post" name="reg" class="needs-validation" id="form">
+			<h1>Fill the form</h1>
+			
+				<h2>Personal Information</h2>
+
+				<div class="form-group ">
+					<div class="col-sm-4">
+					<label for="userName">Сome up with a username</label>
+					<div class="input-group">
+        				<div class="input-group-prepend">
+          				<span class="input-group-text" id="inputGroupPrepend">@</span>
+        				</div>
+					<input style="border-radius:0 3px 3px 0;" type="text" id="userName" name="username" class="form-control" placeholder="Username" maxlength="20" required>
+						
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="name">Enter name</label>
+					
+					<input type="text" id="name" name="name" class="form-control" placeholder="Name" maxlength="15" required>
+					
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="surname">Enter surname</label>
+					
+					<input type="text" id="surname" name="surname" class="form-control" placeholder="Surname" maxlength="20" required>
+					
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="age">Age</label>
+					
+					<input type="number" id="age" name="age" class="form-control" placeholder="Age" min="18" max="120" required>
+					
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="sex">Sex</label>
+	      				<select id="sex" name="sex" class="form-control">
+	        			<option>Male</option>
+	        			<option>Female</option>
+	        			<option>Another</option>
+	      				</select>
+					</div>
+				</div>
+	
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="date">Date of birth</label>
+						<input type="date" id="date" name="date" class="form-control" required>				
+					</div>
+				</div>	
+					
+				<h2>Location</h2>
+				
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="country">Country</label>
+					
+					<input type="text" id="country" name="country" class="form-control" placeholder="Country" maxlength="15" required>
+					
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="city">City</label>
+					
+					<input type="text" id="city" name="city" class="form-control" placeholder="City" maxlength="15" required>
+					
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="addres">Addres</label><br>
+					<small>Street(name)-apartment(number)</small>
+					<input type="addres" id="addres" name="addres" class="form-control" placeholder="Addres" maxlength="15" required>
+					</div>
+				</div>
+
+				<h2>Contact Information</h2>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="email">Email</label>
+					
+					<input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+					<span class="form__error">This field must contain E-Mail in the format example@site.com</span>
+					</div>
+				</div>				
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="phone">Phone number</label>
+					
+					<input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone number" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"  required>
+					<span class="form__error">This field must contain a phone in the format +380 (96) 244-45-67</span>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="password">Create a password</label>
+					
+					<input type="password" id="password" name="password" class="form-control" maxlength="15" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="Password" required>
+					<span class="form__error">The password must contain at least 8 characters and contain one letter and one digit.</span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-4">
+					<label for="rePassword">Retype password</label>
+					
+					<input type="password" id="rePassword" name="rePassword" class="form-control" maxlength="15" placeholder="Password" required>
+					</div>
+				</div>
+				
+				<div class="form-group">
+   					<div class="form-check custom-control custom-checkbox">
+	     				<input class="form-check-input custom-control-input" type="checkbox" name="checkbox" value="" id="invalidCheck" required>
+	      				<label class="form-check-label custom-control-label" for="invalidCheck">
+	        			Agree to terms and conditions
+	      				</label>
+				    </div>
+				 </div>
+
+				<div class="form-group ">
+					<div class="col-sm-4">
+				<button type="submit" name="submit" onclick="valid(document.getElementById('form'))" class="btn">Сheck in</button>
+					</div>
+				</div>
+
+		</form>
+	</div>
+</body>
+</html>
+
